@@ -25,11 +25,8 @@ public:
     return head; 
   }
   void cut(ListNode* x_prev, ListNode* x, ListNode* y) {
-    // connect x_prev to x.next
     x_prev->next = x->next;
-    // connect x.next to y.next
     x->next = y->next;
-    // connext y.next to x
     y->next = x;
   }
 };
